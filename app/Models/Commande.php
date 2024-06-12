@@ -8,15 +8,15 @@ use Illuminate\Database\Eloquent\Model;
 class Commande extends Model
 {
     use HasFactory;
-    protected $fillable = ['quantite','total','type','statut'];
+    protected $fillable = ['localisation','quantite','total','idproduit','iduser',];
 
     public function user()
     {
-        return $this->belongsTo(User::class);
+        return $this->belongsTo(User::class,'iduser');
     }
 
     public function produit()
     {
-        return $this->belongsTo(Produit::class);
+        return $this->belongsTo(Produit::class,'idproduit');
     }
 }

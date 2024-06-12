@@ -64,7 +64,7 @@
 					    <a href="#!" class="nav-link"><span class="pcoded-micon"><i class="feather icon-layout"></i></span><span class="pcoded-mtext">Produit</span></a>
 					    <ul class="pcoded-submenu">
 					        <li><a href="{{route('produit_create')}}">Ajouter</a></li>
-					        <li><a href="listeproduit.php">Nos Produits</a></li>
+					        <li><a href="{{route('produit_index')}}">Nos Produits</a></li>
 					    </ul>
 					</li>
 					<li class="nav-item pcoded-hasmenu">
@@ -77,7 +77,7 @@
 					<li class="nav-item pcoded-hasmenu">
 					    <a href="#!" class="nav-link"><span class="pcoded-micon"><i class="feather icon-layout"></i></span><span class="pcoded-mtext">Commande</span></a>
 					    <ul class="pcoded-submenu">
-					        <li><a href="listeunite.php">Nos Commandes</a></li>
+					        <li><a href="{{route('commande_index')}}">Nos Commandes</a></li>
 					    </ul>
 					</li>
 					<li class="nav-item pcoded-hasmenu">

@@ -15,8 +15,9 @@ return new class extends Migration
             $table->id();
             $table->float('quantite');
             $table->float('total');
-            $table->string('type');
-            $table->string('statut');
+            $table->string('type')->default('Domicile');
+            $table->string('statut')->nullable();
+            $table->string('localisation');
             $table->bigInteger('idproduit')->reference('produit')->on('id')->onDelete('cascade');
             $table->bigInteger('iduser')->reference('user')->on('id')->onDelete('cascade');
             $table->timestamps();
