@@ -45,7 +45,7 @@
                         </div>
                     </div>
                     <div class="btn-group">
-                        <button type="button" class="btn btn-sm btn-light " >Langue EN</button>
+                        <button type="button" class="btn btn-sm btn-light "  onclick="translateContent()" >Langue EN</button>
                     </div>
                 </div>
             </div>
@@ -58,16 +58,7 @@
                 </a>
             </div>
             <div class="col-lg-4 col-6 text-left">
-                <form action="">
-                    <div class="input-group">
-                        <input type="text" class="form-control" placeholder="Recherche un produit">
-                        <div class="input-group-append">
-                            <span class="input-group-text bg-transparent text-primary">
-                                <i class="fa fa-search"></i>
-                            </span>
-                        </div>
-                    </div>
-                </form>
+                
             </div>
             <div class="col-lg-4 col-6 text-right">
                 <p class="m-0">Service client</p>
@@ -106,7 +97,7 @@
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
                             <a href="{{route('acceuil')}}" class="nav-item nav-link active">Acceuil</a>
-                            <a href="" class="nav-item nav-link">boutique</a>
+                            <a href="{{route('boutique')}}" class="nav-item nav-link">boutique</a>
                             <a href="{{route('dashboard')}}" class="nav-item nav-link">dashboard</a>
                             <a href="{{route('user_commande_show')}}" class="nav-item nav-link">Suivi commande</a>
                             <a href="{{route('produit_show_produit_cart')}}" class="nav-item nav-link active">Panier<i class="fas fa-shopping-cart text-primary"></i></a>

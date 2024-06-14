@@ -57,7 +57,7 @@
                         </form>
                     </td>
                     <td>
-                        <form action="" method="post">
+                        <form action="{{ route('commande_delete', $commandes->id) }}" method="post">
                             @csrf 
                             @method('delete')
                             <input type="submit" value="supprimer" class="btn btn-danger">

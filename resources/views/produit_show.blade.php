@@ -131,6 +131,7 @@
                                 @foreach($commentaire as $commentaires)
                                 <h6>User: {{$commentaires->user->pseudo}}</h6> <p> {{$commentaires->description}}</p><hr>
                                 @endforeach
+                              
                             </div>
                          
                         </div>

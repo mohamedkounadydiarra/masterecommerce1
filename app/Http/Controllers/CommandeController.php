@@ -110,6 +110,8 @@ class CommandeController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $commande = Commande::findOrFail($id);
+        $commande->delete();
+        return redirect()->back()->with('success','Commande supprimer avec success!');
     }
 }

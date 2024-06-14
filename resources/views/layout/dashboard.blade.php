@@ -80,12 +80,7 @@
 					        <li><a href="{{route('commande_index')}}">Nos Commandes</a></li>
 					    </ul>
 					</li>
-					<li class="nav-item pcoded-hasmenu">
-					    <a href="#!" class="nav-link"><span class="pcoded-micon"><i class="feather icon-layout"></i></span><span class="pcoded-mtext">Commentaire</span></a>
-					    <ul class="pcoded-submenu">
-					        <li><a href="listefournisseur.php">Nos Commentaires</a></li>
-					    </ul>
-					</li>
+					
 		
 					
 					<li class="nav-item">

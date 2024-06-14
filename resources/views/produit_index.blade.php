@@ -52,6 +52,10 @@
                             <input type="submit" value="supprimer" class="btn btn-danger">
                         </form>
                     </td>
+                    <td>
+                        <a href="{{route('commentaire_produit_user', ['id' => $produits->id])}}"><input type="submit" value="commentaire" class="btn btn-primary"></a>
+                    </td>
+
                </tr>
                @endforeach
                 </tbody>

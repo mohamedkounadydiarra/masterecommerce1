@@ -5,6 +5,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\AcceuilController;
 use App\Http\Controllers\ProduitController;
 use App\Http\Controllers\WelcomeController;
+use App\Http\Controllers\BoutiqueController;
 use App\Http\Controllers\CommandeController;
 use App\Http\Controllers\CategorieController;
 use App\Http\Controllers\CommentaireController;
@@ -37,7 +38,9 @@ Route::prefix('user')->group(function(){
     Route::post('/commande_store',[CommandeController::class,'store'])->name('commande_store');
     Route::get('/user_commande_show', [CommandeController::class, 'usercommande'])->name('user_commande_show');
     ///// comment //////
-     Route::post('/commentaire_store',[CommentaireController::class,'store'])->name('commentaire_store');
+    Route::post('/commentaire_store',[CommentaireController::class,'store'])->name('commentaire_store');
+    /// boutique //////
+    Route::get('/boutique',[BoutiqueController::class,'index'])->name('boutique');
    
 });
 
@@ -62,10 +65,12 @@ Route::prefix('dashboard')->group(function(){
     Route::delete('/produit_delete/{id}',[ProduitController::class,'destroy'])->name('produit_delete');
 
     Route::get('/commentaire_index',[CommentaireController::class,'index'])->name('commentaire_index');
+    Route::get('/commentaire_produit_user/{id}',[CommentaireController::class,'index'])->name('commentaire_produit_user');
     Route::delete('/commentaire_delete/{id}',[CommentaireController::class,'destroy'])->name('commentaire_delete');
     //// la gestion des commande admin
     Route::get('/commande_index',[CommandeController::class,'index'])->name('commande_index');
     Route::put('/commande/{id}/update', [CommandeController::class, 'update'])->name('commande_update');
+    Route::delete('/commande/{id}/delete', [CommandeController::class, 'destroy'])->name('commande_delete');
 });
 
 
